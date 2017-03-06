@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homeless</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="initial-scale=1.0">
+	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+  </head>
+
+  <body>
+<div id="nav" class="navbar-fixed">
+    <nav class="navbar-fixed blue darken-4 main-navigation" role="navigation">
+    <div class="nav-wrapper container">
+     Helping the Homeless
+        <button><a id="logo-container" href="/" class="brand-logo  white-text">Home</a></button>
+        <button><a href="/contact">Contact Us</a></button>
+        <button><a href="/map">Map</a></button>
+        <button><%=link_to "Log Out", destroy_user_session_path, method: :delete %></button>
+    </div>
+  </nav>
+</div>
+
+	   <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+
+
+    <%= yield %>
+
+
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfYKTiV42zRzh8KgdrdYBqu7WF3mfkCDo&callback=initMap">
+    </script>
+  </body>
+</html>
