@@ -19,10 +19,9 @@
 
 
 #map {
-    height: 653px;  /*653*/
+    height: 653px;
   }
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
   }
