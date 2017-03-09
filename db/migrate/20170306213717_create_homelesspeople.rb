@@ -5,8 +5,8 @@ class CreateHomelesspeople < ActiveRecord::Migration[5.0]
     	t.string :steet_name
     	t.integer :homeless_id
     	t.integer :user_id
-    	t.integer :lat
-    	t.integer :long
+    	t.float :lat
+    	t.float :long
     	t.string :institute_id
 
   	t.timestamps
