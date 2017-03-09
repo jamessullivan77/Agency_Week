@@ -15,7 +15,24 @@
 //= require turbolinks
 //= require_tree .
 
+jQuery(document).ready(function(){
+  $(window).scroll(function(e){
+    parallaxScroll();
+    });
+     
 
+
+ }); 
+
+function parallaxScroll(){
+    console.log("parallaxscroll")
+    var scrolled = $(window).scrollTop();
+    $('#parallax-bg-1').css('top',(0-(scrolled*.25))+'px');
+    $('#parallax-bg-2').css('top',(0-(scrolled*.4))+'px');
+    $('#parallax-bg-3').css('top',(0-(scrolled*.75))+'px');
+    $('#parallax-bg-4').css('top',(0-(scrolled*.66))+'px');
+}
+ 
 var map, marker;
 
 function initializeMap(location){

@@ -3,11 +3,12 @@ class CreateHomelesspeople < ActiveRecord::Migration[5.0]
     create_table :homelesspeople do |t|
     	t.integer :street_number
     	t.string :steet_name
-    	t.integer :homeless_id
+    	# t.integer :homeless_id
     	t.integer :user_id
     	t.float :lat
     	t.float :long
     	t.string :institute_id
+
 
   	t.timestamps
     end 
