@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20170309215916) do
     t.string   "steet_name"
     t.integer  "homeless_id"
     t.integer  "user_id"
-    t.float    "lat"
-    t.float    "long"
+    t.integer  "lat"
+    t.integer  "long"
     t.string   "institute_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -54,9 +54,6 @@ ActiveRecord::Schema.define(version: 20170309215916) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "fname"
-    t.string   "lname"
-    t.string   "username"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
