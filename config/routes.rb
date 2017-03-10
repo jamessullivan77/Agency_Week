@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   post '/database' => 'users#create'
 
   post '/database' => 'users#sign_up'
+
 end
 
 
