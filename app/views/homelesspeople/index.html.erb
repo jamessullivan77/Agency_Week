@@ -2,7 +2,7 @@
 <!-- 
 <div class="gmnoprint custom-control-container"> -->
    <!--  <div class="gm-style-mtc"> -->
-        <div id="add_marker" class="custom-control" title="Add Marker">Add Marker</div>
+<div id="add_marker" class="custom-control" title="Add Marker">Add Marker</div>
   <!--   </div> -->
 <!-- </div> -->
 
@@ -15,8 +15,17 @@
 
 </div>
 
-<div id="homeless_marker">
-
-
-		
+<div id="homeless_item">
+<%= form_for Item.new, :html => { :id => 'homeless_item_#{post.id}' } do |i| %> 
+<%= i.label :item_name %>
+<%= i.text_field :item_name %>
+<% end %>
 </div>
+
+
+
+
+
+
+
+

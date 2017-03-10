@@ -33,7 +33,7 @@ function parallaxScroll(){
     $('#parallax-bg-4').css('top',(0-(scrolled*.66))+'px');
 }
  
-var map, marker;
+var map, marker; 
 
 function initializeMap(location){
 
@@ -114,6 +114,17 @@ var rightlick = google.maps.event.addListener(map, "rightclick", function(event)
           },
       });
   });
+      function createInfoWindow(input){
+          var infowindow = new google.maps.InfoWindow({
+            content: document.getElementById('homeless_item')
+          });
+          return infowindow;
+        }
+
+        // var info = createInfoWindow(document.getElementById("homeless_marker"));
+        //     google.maps.event.addListener(marker, 'click', function() {
+        //       info.open(map,marker);
+        //       });
 }
 
 $(document).ready(function(){

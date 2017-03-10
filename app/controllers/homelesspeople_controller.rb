@@ -4,6 +4,8 @@ class HomelesspeopleController < ApplicationController
   # respond_to :html, :js, :erb
   def index
   @users = User.all
+  @items = Item.new 
+
   end
   def new
     @homeless = Homelesspeople.new
@@ -19,6 +21,11 @@ class HomelesspeopleController < ApplicationController
      respond_to do |format|
        format.json { render json: @homeless }
      end
-     # redirect_to :root
+
+     def show
+         @items = Item.new
+
+     end
+     
    end
 end
