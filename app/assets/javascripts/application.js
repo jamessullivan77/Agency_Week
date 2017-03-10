@@ -61,21 +61,31 @@ function initializeMap(location){
       return infowindow;
   }
   
-var rightlick = google.maps.event.addListener(map, "rightclick", function(event) {
+var rightclick = google.maps.event.addListener(map, "rightclick", function(event) {
    console.log("rightclick")
     var lat = event.latLng.lat();
     var lng = event.latLng.lng();
- 
+  
     // populate yor box/field with lat, lng
     // alert("Lat=" + lat + "; Lng=" + lng);
-    new google.maps.Marker({
+    var marker = new google.maps.Marker({
        position: event.latLng,
        map: map,
        icon: {
           url: '/assets/homeless.png',
           scaledSize: new google.maps.Size(50, 50)
         }
+    
+    // new google.maps.InfoWindow({
+    //     content: document.getElementById('homeless_item')
+    //       });
+    //       return infowindow;
+    //     }
    });
+
+    google.maps.event.addListener(marker, 'click',function() {
+            info.open(map, marker);
+    });
 
     $.ajax({
           url: '/map',
@@ -89,10 +99,10 @@ var rightlick = google.maps.event.addListener(map, "rightclick", function(event)
 });
 
 
-  var info = createInfoWindow(document.getElementById("homeless_marker"));
+  var info = createInfoWindow(document.getElementById("homeless_item"));
 
   google.maps.event.addListener(marker, 'click',function() {
-          info.open(map,marker);
+          info.open(map, marker);
   });
 
 
@@ -121,15 +131,26 @@ var rightlick = google.maps.event.addListener(map, "rightclick", function(event)
           return infowindow;
         }
 
+        // function createInfoWindow(input){
+        //   var infowindow = new google.maps.InfoWindow({
+        //    icon: {
+        //   url: '/assets/homeless.png',
+        //   scaledSize: new google.maps.Size(50, 50)
+          
+        // }
         // var info = createInfoWindow(document.getElementById("homeless_marker"));
-        //     google.maps.event.addListener(marker, 'click', function() {
+        //     google.maps.event.addListener('click', function(event) {
+        //       console.log(event)
         //       info.open(map,marker);
         //       });
+  // })
 }
 
 $(document).ready(function(){
     navigator.geolocation.getCurrentPosition(initializeMap);
   });
+
+
 
 
     
