@@ -20,6 +20,9 @@
 
 #map {
     height: 653px;
+    width: 600px; 
+  /*653*/
+
   }
 body {
     margin: 0;
@@ -42,6 +45,42 @@ body {
  #homeless_list h6{
     color: red;
   }
+.custom-control-container {
+    margin: 5px;
+}
+.custom-control {
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    z-index: 1;
+    text-align: center;
+    direction: ltr;
+    text-align: center;
+    position: fixed;
+    margin-top: 12px;
+    margin-left: 300px;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", Arial, sans-serif;
+    -webkit-user-select: none;
+    font-size: 11px !important;
+    background-color: rgb(255, 255, 255);
+    padding: 1px 6px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.14902);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+    min-width: 28px;
+    font-weight: 500;
+   /* display: none;*/
+}
+.custom-control:hover {
+    font-weight: 900 !important;
+}
  #logout{
     margin-right: 200px;
   }
+
+

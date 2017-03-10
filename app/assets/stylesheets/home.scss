@@ -69,7 +69,7 @@ div#bg-3-3{
 	right:210px;
 }
 div#bg-3-4{
-	background:url('http://i.imgur.com/RCkNBqK.png');
+	background:url('http://i.imgur.com/OOaXh2q.png');
 	background-size: cover;
 	width:100%;
 	height:684px;
@@ -95,8 +95,10 @@ div#bg-4-1{
 	left: 50px;
 
 }div#bg-4-3{
-	// font-size: 1.6em;
+	font-size: 1.2em;
 	top:3300px;
+	font-family: 'Germano';
+	width: 60%;
 
 }
 div#bg-4-4{
@@ -185,3 +187,26 @@ div#bg-1-5{
 	top:1200px;
 	left:-200px;
 }
+
+//  FONTS
+
+
+@font-face {
+	font-family:'opensans';
+	src:'/assets/open-sans/OpenSans-Regular.ttf';
+}
+
+@font-face {
+	font-family:'Germano';
+	src:'/assets/Germano-Regular.ttf';
+}
+
+@font-face {
+	font-family:'Medula';
+	src:'/assets/MedulaOne-Regular.ttf'
+}
+
+
+
+
+
