@@ -11,14 +11,26 @@
   </head>
 
   <body>
-  
+
+   <div id="nav" class="navbar-fixed">
+    <nav class="navbar-fixed blue darken-4 main-navigation" role="navigation">
+    <div class="nav-wrapper container">
+        <button><a id="logo-container" href="/" class="brand-logo  white-text">Home</a>
+        <button><a href="/feed">Feed</a>
+        <button><a href="/map">Map</a>
+        <button><%=link_to "Log Out", destroy_user_session_path, method: :delete %>
+        <button><a href="/profile">Profile</a>
+    </div>
+  </nav>
+</div>
+
 	   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfYKTiV42zRzh8KgdrdYBqu7WF3mfkCDo">
+      src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>">
     </script>
   </body>
 </html>
