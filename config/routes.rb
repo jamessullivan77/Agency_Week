@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post '/map' => 'homelesspeople#create'
 
 ###################################################
-
+#getting
 ###################################################
   get '/map' => 'items#new'
 
@@ -32,6 +32,12 @@ Rails.application.routes.draw do
   
   get '/contact' => 'static#index'
 
+#########################################
+#editing user porfile
+######################################### 
+   devise_scope :user do
+   get 'profile', to: 'devise/registrations#edit'
+
 ###################################################
 #displaying the saved users and their info to our 
 #backend admin pages, one called database.
@@ -44,3 +50,8 @@ Rails.application.routes.draw do
 
   post '/database' => 'users#sign_up'
 end
+
+
+
+ end
+
