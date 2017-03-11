@@ -1,3 +1,45 @@
+
+    
+<div id="map_2">
+    <div id="map-container">
+    <div id="map-canvas"></div>
+  </div>
+
+
+  <div id="map">
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  <div id="users_post">
+  <% @homelesspeople.each do |sighting| %>
+    <h5><%= sighting.created_at.localtime.strftime("%a - %D "" %l: %M %p") %></h5>
+    <h4><%= sighting.lat %></h4>
+    <h3><%= sighting.long %></h3>
+
+  <%= @items.each do |i| %>
+    <%= i.item_name %>
+   
+    <% end %>
+    
+ 
+    <% end %>
+  </div>
+
+
+
+
+
+
+
+
+=======
 <% @items.reverse.each do |item| %>
 
 <div id="user_post">
@@ -11,3 +53,4 @@
 <% end %>
 </div>
 <% end %>
+

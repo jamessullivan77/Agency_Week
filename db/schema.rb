@@ -15,10 +15,9 @@ ActiveRecord::Schema.define(version: 20170311221022) do
   create_table "homelesspeople", force: :cascade do |t|
     t.integer  "street_number"
     t.string   "steet_name"
-    t.integer  "homeless_id"
     t.integer  "user_id"
-    t.integer  "lat"
-    t.integer  "long"
+    t.float    "lat"
+    t.float    "long"
     t.string   "institute_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

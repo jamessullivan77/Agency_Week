@@ -23,7 +23,7 @@ class HomelesspeopleController < ApplicationController
      end
 
      def show
-         @items = Item.new
+         
 
      end
      

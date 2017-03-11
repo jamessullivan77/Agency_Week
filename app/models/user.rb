@@ -7,8 +7,6 @@ class User < ApplicationRecord
 
   has_many :homelesspeople
 
-
-
 #   def to_param
 #   permalink
 #   end
