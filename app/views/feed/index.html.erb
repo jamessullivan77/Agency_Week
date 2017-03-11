@@ -1,10 +1,13 @@
 <% @items.reverse.each do |item| %>
-<p><%= item %></p>
 
-<a href="/users/<%= item.user.id %>">
+<div id="user_post">
 
-By: <%= item.user.email.upcase %>
-</a>
+<% User.all.each do |i| %>
+<%= i.username %>
 
 
-<%end%>
+
+
+<% end %>
+</div>
+<% end %>
