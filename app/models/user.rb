@@ -7,8 +7,6 @@ class User < ApplicationRecord
 
   has_many :homelesspeople
 
-  before_create :create_permalink
-
 #   def to_param
 #   permalink
 #   end

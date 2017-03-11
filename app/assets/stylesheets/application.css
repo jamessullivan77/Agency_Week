@@ -110,23 +110,22 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   /*653*/
 
   }
-#Mark_Person_In_Need{
+/*#Mark_Person_In_Need{
   		font-size: 200px
   		z-index: 1;
   		color: black;
-  }
+  }*/
 
- #homeless_list{
+/* #homeless_list{
     height: 400px;
     width: 300px;
     border: solid black 3px;
     margin-left: 300px;
     overflow-y: scroll
-  }
+  }*/
 
- #homeless_list h6{
-    color: red;
-  }
+
+
 .custom-control-container {
     margin: 5px;
 }
@@ -158,10 +157,46 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     font-weight: 500;
    /* display: none;*/
 }
-.custom-control:hover {
+.custom-control:hover{
     font-weight: 900 !important;
 }
+  #map_2{
+    /*margin-top: 20px;*/
+    margin-left: 25%;
+    height: 50px;
+    width: 600px; 
+  /*653*/
+
+  }
+#users_post{
+  margin-top: 200px;
+  display: block;
+
+}
+
+
 #logout{
     margin-right: 200px;
 }
 #dropdown
+
+
+
+
+
+
+#users_post h3{
+  margin-left: 80px;
+  color: green;
+}
+#users_post h4{
+  margin-left: 80px;
+  color: skyblue;
+}
+#users_post h5{
+  margin-left: 80px;
+  color: red;
+}
+
+
+

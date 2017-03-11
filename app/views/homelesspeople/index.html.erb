@@ -15,15 +15,20 @@
 
 </div>
 
+
 <div id="homeless_item">
 <%= form_for Item.new, :html => { :id => 'homeless_item_#{post.id}' } do |i| %> 
 <%= i.label :item_name %>
 <%= i.text_field :item_name %>
 <%= i.submit ("Submit")  %>
 <% end %>
+
+
+
+
 </div>
 
-<!-- method="/feed" action="POST" -->
+
 
 
 
