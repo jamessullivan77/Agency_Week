@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 #editing user porfile
 ######################################### 
    devise_scope :user do
-   get 'profile', to: 'devise/registrations#edit'
+   get '/profile', to: 'devise/registrations#edit'
 
 ###################################################
 #displaying the saved users and their info to our 

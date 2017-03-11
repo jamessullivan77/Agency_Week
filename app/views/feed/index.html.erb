@@ -1,3 +1,4 @@
+
     
 <div id="map_2">
     <div id="map-container">
@@ -37,4 +38,19 @@
 
 
 
+
+=======
+<% @items.reverse.each do |item| %>
+
+<div id="user_post">
+
+<% User.all.each do |i| %>
+<%= i.username %>
+
+
+
+
+<% end %>
+</div>
+<% end %>
 
