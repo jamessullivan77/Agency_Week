@@ -5,7 +5,6 @@ body{
   background:rgba(230,231,232,1);
 	height:6900px;
 }	
-
 div#parallax-bg-1{
 	position: fixed;
 	width: 1200px;
@@ -14,7 +13,6 @@ div#parallax-bg-1{
 	margin-left: -600px; 
 	z-index: 1;
 }
-
 /* background middle layer*/
 div#parallax-bg-2{
 	position: fixed;
@@ -24,7 +22,6 @@ div#parallax-bg-2{
 	margin-left: -600px; 
 	z-index: 2;
 }
-
 div#parallax-bg-3{
 	position: fixed;
 	width: 100%;
@@ -41,7 +38,6 @@ div#parallax-bg-4{
 	margin-left: -470px;
 	z-index: 4;
 }
-
 div#parallax-bg-3 div{
 	background-repeat:no-repeat;
 	position:absolute;
@@ -76,7 +72,6 @@ div#bg-3-4{
 	top:2590px;
 	right:210px;
 }
-
 div#parallax-bg-4 div{
 	background-repeat:no-repeat;
 	position:absolute;
@@ -84,22 +79,22 @@ div#parallax-bg-4 div{
 	overflow:hidden;
 }
 div#bg-4-1{
-	font-size: 1.7em;
+	font-family:'Germano';
+	font-size:1.6em;
 	top:2950px;
 	left:340px;
-
 }div#bg-4-2{
+	font-family:'opensans';
 	font-size: 1.2em;
 	top:3120px;
 	width: 60%;
 	left: 50px;
-
 }div#bg-4-3{
 	font-size: 1.2em;
 	top:3300px;
-	font-family: 'Germano';
+	font-family:'opensans';
 	width: 60%;
-
+	left: 50px;
 }
 div#bg-4-4{
 	width:100%;
@@ -107,8 +102,6 @@ div#bg-4-4{
 	top:4200px;
 	right:210px;
 }
-
-
 
 /* middle layer clouds */
 
@@ -121,7 +114,6 @@ div#parallax-bg-2 div{
 	height:138px;
 	overflow:hidden;
 }
-
 div#bg-2-1{
 	top:100px;
 	left:-310px;
@@ -207,6 +199,9 @@ div#bg-1-5{
 }
 
 
-
+@font-face {
+	font-family:'amaranth';
+	src:'/assets/amaranth/Amaranth-Regular.ttf'
+}
 
 

@@ -17,91 +17,195 @@
     margin: 0;
     padding: 0;  
 }
-.parent2 {
-  top:15px;
-  left:15px;
-  position:fixed;
- display:block;
-  width:100px;
-  height:100px;
-  background-color:transparent;
-  border-radius:50%;
-  z-index:20;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            /*  NAV  */
+
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+*{
+  margin:0;
+  padding:0;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
 }
-.test1 {
-  width:60%;
-  height:60%;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:70px;
-    top:25%;
-  left:25%;
-  z-index:19;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    position:absolute;
+a{
+  text-decoration:none;
 }
-.test2 {
-  width:60%;
-  height:60%;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:70px;
-    top:25%;
-  left:25%;
-  z-index:19;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+a:hover{
+  color:#fff;
 }
-.test3 {
-  width:60%;
-  height:60%;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:70px;
-    top:25%;
-  left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+.navbar{
+  height:60px;
+  background:linear-gradient(#5b5c60, #0f1010);
+  background:-webkit-linear-gradient(#5b5c60, #0f1010);
+  background:-moz-linear-gradient(#5b5c60, #0f1010);
+  font-family:arial;
+ }
+.container{
+  margin:auto;
 }
-  .test4 {
-  width:60%;
-  height:60%;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:70px;
-  top:25%;
-  left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+.navbar-header{
+  padding:0 0;
 }
-.mask2 {
-  top:15px;
-  left:15px;
-  width:100px;
-  height:100px;
-  background:darkSlateGray;
-  border-radius:50%;
-  position:absolute;
-  z-index:21;
-  color:white;
-  text-align:center;
-  line-height:120px;
-  cursor:pointer;
-  position:fixed;
+.navbar-brand{
+  font-family: 'Lily Script One', arial;
+  color:#e5e7ee;
+  padding:0 20px 0px 20px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-right: 5px;
+  display: block;
+  text-shadow: 0 1px 1px rgba(0,0,0, 0.3);
+}
+.toggle{
+  float:left;
+  width: 70px;
+  height: 40px;
+  padding-top: 2px;
+  position: relative;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background: linear-gradient(#535458, #1c1d1e);
+  background: -webkit-linear-gradient(#535458, #1c1d1e);
+  background: -moz-linear-gradient(#535458, #1c1d1e);
+  border: 1px solid rgba(0,0,0, 0.3);
+  box-shadow: 0 1px 1px rgba(255,255,255, 0.3) ,
+              inset 0 2px 1px rgba(255,255,255, 0.3);
+  cursor: pointer;
+}
+.toggle:hover{
+  background: #38393b;
+}
+.toggle:active{
+  background: #1c1d1e;
+  box-shadow: 0 1px 1px rgba(255,255,255, 0.3) ,
+              inset 0 2px 1px rgba(0,0,0, 0.9);
+}
+.toggle:focus{
+  outline: none;
+}
+.toggle > span{
+  display: block;
+  border-radius: 2px;
+  height: 5px;
+  width: 34px;
+  background: #6e7074;
+  margin: auto;
+  margin-bottom: 3px;
+}
+.navcollapse{
+  height:0;
+  overflow:hidden;
+  background:#0f1010;
+  padding: 0 5px;
+  width: 150px;
+  transition:height .5s;
+  -webkit-box-sizing:border-box;
+  padding-left: 0px;
+  border-radius: 0 0 10px;
+  position: relative;
+  z-index: 1;
+}
+.nav > li:first-child{
+  padding-top: 5px;
+}
+.nav > li{
+    list-style:none;
+    display: block;
+}
+.nav > li > a{
+    padding:10px 10px;
+    margin-left: 5px;
+    line-height:30px;
+    background: #404343;
+    color:#ccc;
+    display: block;
+    border-top: 1px solid #353737;
+    border-bottom: 1px solid #5e6262;
+    transition:padding-left 0.3s;
+ }
+ .nav > li > a:hover{
+  padding-left: 15px;
+  color: #fff;
+ }
+ .nav > li:last-child > a{
+  border-radius: 0 0 10px 0;
+ }
+ .nav > li > a:hover{
+  background: #2d2f2f;
+ }
+
+@media(min-width:770px){
+  .navbar{
+  height:60px;
+  background:linear-gradient(#5a8eee, #4066e8);
+  background:-webkit-linear-gradient(#5a8eee, #4066e8);
+  background:-moz-linear-gradient(#5a8eee, #4066e8);
+  font-family:arial;
+ 
+}
+  .container{
+    width:750px;
+  }
+  .navbar-header{
+    float:left;
+  }
+  .navbar-header{
+    background: rgba(255,255,255, 0.1);
+  }
+  .toggle{
+    display: none;
+  }
+  .navcollapse{
+    display: block;
+    height:0 !important;
+    padding-top:10px !important;
+    background:transparent !important;
+    width: auto;
+    margin:0;
+    padding:0;
+    overflow:visible ;
+  }
+  .nav{
+    margin:0;
+    padding:0;
+  }
+  .nav > li{
+    float:right;
+    list-style:none;
+    padding: 5px;
+    
+  }
+  .nav > li > a{
+    border-radius: 5px !important;
+    background: transparent;
+    padding:0 15px;
+    border: none;
+  }
+  .nav > li > a:hover{
+  background:-webkit-linear-gradient(#d9e2f9, #becdf6);
+  background:-moz-linear-gradient(#d9e2f9, #becdf6);
+  background:linear-gradient(#d9e2f9, #becdf6);
+  color: #4066e8;
+ }
+  
+}
+@media(min-width:990px){
+  .container{
+    width:950px;
+  }
 }
 
+@media(min-width:1200px){
+  .container{
+    width:1170px;
+  }
+}
+
+.show{
+  height:270px;
+}
 
 #map {
     /*margin-top: 20px;*/
@@ -110,10 +214,10 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   /*653*/
 
   }
-
 .custom-control-container {
     margin: 5px;
 }
+
 .custom-control {
     cursor: pointer;
     width: 60px;
@@ -140,6 +244,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
     min-width: 28px;
     font-weight: 500;
+    overflow-y: hidden;
    /* display: none;*/
 }
 .custom-control:hover{
@@ -153,6 +258,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   /*653*/
 
   }
+
 #users_post{
   margin-top: 200px;
   display: block;
@@ -160,7 +266,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 #logout{
     margin-right: 200px;
 }
-#dropdown
+/* #dropdown */
 
 #users_post h3{
   margin-left: 80px;
@@ -174,6 +280,3 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   margin-left: 80px;
   color: red;
 }
-
-
-

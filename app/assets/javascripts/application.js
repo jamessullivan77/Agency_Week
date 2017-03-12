@@ -58,11 +58,13 @@ function parallaxScroll(){
     $('#parallax-bg-4').css('top',(0-(scrolled*.66))+'px');
 }
  
+
 // #####################################
 // for google maps api
 // #####################################
 if(location.pathname == '/map'){
   var map, marker; 
+
 
 function initializeMap(location){
 
@@ -262,13 +264,19 @@ $(window).load(function(){
 
 
 $(document).ready(function(){
+
     if(location.pathname == '/feed'){
       navigator.geolocation.getCurrentPosition(initializeMap);
     }
     if(location.pathname == '/map'){
+
       navigator.geolocation.getCurrentPosition(initializeMap);
     }
   });
+
+$(".toggle").click(function(){
+  $(".navcollapse").toggleClass("show");
+});
 
 
 
