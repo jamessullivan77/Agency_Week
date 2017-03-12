@@ -1,15 +1,15 @@
 
-    
-<div id="map_2">
     <div id="map-container">
     <div id="map-canvas"></div>
   </div>
 
 
-  <div id="map">
+  <div id="map_2">
+
+
 
   </div>
-</div>
+
 
 
 
@@ -23,7 +23,7 @@
     <h4><%= sighting.lat %></h4>
     <h3><%= sighting.long %></h3>
 
-  <%= @items.each do |i| %>
+  <% @items.each do |i| %>
     <%= i.item_name %>
    
     <% end %>
@@ -38,19 +38,4 @@
 
 
 
-
-=======
-<% @items.reverse.each do |item| %>
-
-<div id="user_post">
-
-<% User.all.each do |i| %>
-<%= i.username %>
-
-
-
-
-<% end %>
-</div>
-<% end %>
 

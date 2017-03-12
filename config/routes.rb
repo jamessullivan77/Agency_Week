@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   #on Lat, Lng and displaying on the map.
   post '/map' => 'homelesspeople#create'
 
+  get '/api/markers/list' => 'homelesspeople#list'
+
 ###################################################
 #getting
 ###################################################
