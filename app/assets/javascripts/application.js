@@ -58,6 +58,7 @@ function parallaxScroll(){
     $('#parallax-bg-4').css('top',(0-(scrolled*.66))+'px');
 }
  
+ //     Map API
 
 var map, marker; 
 
@@ -173,8 +174,14 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
 }
 
 $(document).ready(function(){
-    navigator.geolocation.getCurrentPosition(initializeMap);
+    if(location.pathname == '/map' || location.pathname == '/feed' ){
+      navigator.geolocation.getCurrentPosition(initializeMap);
+    }
   });
+
+$(".toggle").click(function(){
+  $(".navcollapse").toggleClass("show");
+});
 
 
 
