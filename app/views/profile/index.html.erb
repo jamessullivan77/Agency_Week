@@ -1,0 +1,30 @@
+ <%= current_user.email%><br>
+ <%= current_user.fname%><br>
+ <%= current_user.lname%><br>
+ <%= current_user.username%><br>
+ <%= current_user.created_at%><br>
+ <%= current_user.updated_at%><br>
+ <%= current_user.last_sign_in_at%><br>
+
+
+<%= image_tag current_user.avatar.url %><br>
+<%= image_tag current_user.avatar.url(:medium) %><br>
+<%= image_tag current_user.avatar.url(:thumb) %><br>
+
+
+ <% @items.reverse.each do |item| %>
+ <p><%= item %></p>
+
+<a href="/users/<%= item.user.id %>">
+
+By: <%= item.user.email.upcase %>
+ </a>
+
+
+ <%end if @items %>
+
+
+<button><a href="/edit">edit</a>
+
+
+

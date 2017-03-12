@@ -10,15 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309215916) do
+ActiveRecord::Schema.define(version: 20170311215343) do
 
   create_table "homelesspeople", force: :cascade do |t|
     t.integer  "street_number"
     t.string   "steet_name"
-    t.integer  "homeless_id"
     t.integer  "user_id"
-    t.integer  "lat"
-    t.integer  "long"
+    t.float    "lat"
+    t.float    "long"
     t.string   "institute_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -54,6 +53,9 @@ ActiveRecord::Schema.define(version: 20170309215916) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "username"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -64,6 +66,10 @@ ActiveRecord::Schema.define(version: 20170309215916) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
