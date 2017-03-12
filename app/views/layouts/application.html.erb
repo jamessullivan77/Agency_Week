@@ -3,10 +3,12 @@
   <head>
     <title>Homeless</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="initial-scale=1.0">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
@@ -22,19 +24,28 @@
 
 </div> -->
 
+  <div class="navbar">
+  <div class="container">
 
+    <div class="navbar-header">
+      <button class="toggle"><span></span>
+      <span></span>
+      <span></span></button>
+      <a href="/" class="navbar-brand">Helping Hands</a>
+    </div><!-- navbar-header -->
 
-   <div id="nav" class="navbar-fixed">
-    <nav class="navbar-fixed blue darken-4 main-navigation" role="navigation">
-    <div class="nav-wrapper container">
-        <button><a id="logo-container" href="/" class="brand-logo  white-text">Home</a>
-        <button><a href="/feed">Feed</a>
-        <button><a href="/map">Map</a>
-        <button><%=link_to "Log Out", destroy_user_session_path, method: :delete %>
-        <button><a href="/profile">Profile</a>
-    </div>
-  </nav>
-</div>
+      <ul class="nav navcollapse">
+        
+        <li><a href="/profile">Profile</a></li>
+        <li><%=link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <li><a href="/users/sign_in">Sign in</a></li>
+        <li><a href="/map">Map</a></li>
+        <li><a href="/feed">Feed</a></li>
+      </ul>
+
+  </div><!-- container -->
+</div><!-- navbar -->
+
 
 	   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
