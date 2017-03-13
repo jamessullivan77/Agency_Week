@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
   background:rgba(230,231,232,1);
-	height:6900px;
+	height:5080px;
 }	
 div#parallax-bg-1{
 	position: fixed;
@@ -13,7 +13,7 @@ div#parallax-bg-1{
 	margin-left: -600px; 
 	z-index: 1;
 }
-/* background middle layer*/
+ // background middle layer
 div#parallax-bg-2{
 	position: fixed;
 	width: 1200px;
@@ -79,22 +79,22 @@ div#parallax-bg-4 div{
 	overflow:hidden;
 }
 div#bg-4-1{
-	font-family:'Germano';
-	font-size:1.6em;
+	font-family: 'Open Sans', sans-serif;
+	font-size:1.9em;
 	top:2950px;
 	left:340px;
 }div#bg-4-2{
-	font-family:'opensans';
-	font-size: 1.2em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3em;
 	top:3120px;
 	width: 60%;
 	left: 50px;
 }div#bg-4-3{
-	font-size: 1.2em;
 	top:3300px;
-	font-family:'opensans';
+	font-family: 'Open Sans', sans-serif;
 	width: 60%;
 	left: 50px;
+	
 }
 div#bg-4-4{
 	width:100%;
@@ -103,7 +103,7 @@ div#bg-4-4{
 	right:210px;
 }
 
-/* middle layer clouds */
+// middle layer clouds
 
 div#parallax-bg-2 div{
 	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg1.png');
@@ -143,7 +143,7 @@ div#bg-2-6{
 	left:340px;
 }
 
-/*background layer clouds */
+// background layer clouds 
 
 div#parallax-bg-1 div{
 	background-repeat:no-repeat;
@@ -183,10 +183,10 @@ div#bg-1-5{
 //  FONTS
 
 
-@font-face {
-	font-family:'opensans';
-	src:'/assets/open-sans/OpenSans-Regular.ttf';
-}
+// @font-face {
+// 	font-family:'opensans';
+// 	src:'/assets/open-sans/OpenSans-Regular.ttf';
+// }
 
 @font-face {
 	font-family:'Germano';
