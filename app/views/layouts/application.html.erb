@@ -12,49 +12,27 @@
 	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
-
   <body>
-  <!-- nav -->
-<!--   <div class="parent2">
-  <div class="test1"><i class="fa fa-user fa-2x"></i></div>
-  <div class="test2"><i class="fa fa-hand-peace-o fa-2x"></i></div>
-  <div class="test3"><i class="fa fa-code fa-2x"></i></div>
-  <div class="test4"><i class="fa fa-envelope-o fa-2x"></i></div>
-  <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
-
-</div> -->
-
   <div class="navbar">
-  <div class="container">
-
-    <div class="navbar-header">
-      <button class="toggle"><span></span>
-      <span></span>
-      <span></span></button>
-      <a href="/" class="navbar-brand">Helping Hands</a>
-    </div><!-- navbar-header -->
-
+    <div class="container">
+      <div class="navbar-header">
+        <button class="toggle"><span></span>
+        <span></span>
+        <span></span></button>
+        <a href="/" class="navbar-brand">Helping Hands</a>
+      </div>
       <ul class="nav navcollapse">
-        
-        
         <li><%=link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <li><a href="/users/sign_in">Sign in</a></li>
         <li><a href="/profile">Profile</a></li>
         <li><a href="/map">Map</a></li>
         <li><a href="/feed">Feed</a></li>
       </ul>
-
-  </div><!-- container -->
-</div><!-- navbar -->
-
-
+  </div>
+</div>
 	   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-
-
-
     <%= yield %>
-
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>">
     </script>

@@ -49,7 +49,8 @@ a:hover{
 }
 .navbar-brand{
   font-family: 'Lily Script One', arial;
-  color:#e5e7ee;
+  color:white;
+  font-size: 1.4em;
   padding:0 20px 0px 20px;
   height: 60px;
   line-height: 60px;

@@ -1,21 +1,10 @@
-<!-- ####By location map#### -->
-<!-- 
-<div class="gmnoprint custom-control-container"> -->
-   <!--  <div class="gm-style-mtc"> -->
+				<!-- MAP  PAGE   -->
 <div id="add_marker" class="custom-control" title="Add Marker">Add Marker</div>
-  <!--   </div> -->
-<!-- </div> -->
-
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>
-
-
 <div id="map">
-
 </div>
-
-
 <div id="homeless_item">
 <%= form_for Item.new do |i| %> 
 <%= i.label :item_name, "Item Name" %>
@@ -23,16 +12,4 @@
 <%= hidden_field_tag :homeless_id %>
 <%= i.submit ("Submit") %>
 <% end %>
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
