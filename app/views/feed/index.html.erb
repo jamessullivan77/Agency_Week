@@ -1,19 +1,10 @@
-
+                  <!-- FEEDPAGE -->
     <div id="map-container">
     <div id="map-canvas"></div>
   </div>
-
-
   <div id="map_2">
-
-
-
   </div>
-
-
-
   <div id="users_post">
-
   <% @homelesspeople.each do |sighting| %>
     <h5><%= sighting.created_at.localtime.strftime("%a - %D "" %l: %M %p") %></h5>
     <h3><%= sighting.lat %></h3>
@@ -22,13 +13,9 @@
     <h2><%= sighting.user.email %></h2>
   <% sighting.items.each do |i| %>
     <h3><%= i.item_name %></h3>
-   
     <% end %>
-    
- 
     <% end %>
   </div>
-
 <!--   </div> -->
 
 
