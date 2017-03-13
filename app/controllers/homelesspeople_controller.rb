@@ -5,6 +5,7 @@ class HomelesspeopleController < ApplicationController
   def index
   @users = User.all
   @items = Item.new 
+ 
 
   end
   def new
@@ -20,12 +21,14 @@ class HomelesspeopleController < ApplicationController
        )
      respond_to do |format|
        format.json { render json: @homeless }
-     end
 
-     def show
-         @items = Item.new
-
+       @items = Item.each(params[:item_name])
      end
-     
-   end
+  end
+
+  def list 
+    
+  render :json => Homelesspeople.all
+
+  end 
 end

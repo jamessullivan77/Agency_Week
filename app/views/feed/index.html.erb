@@ -1,14 +1,30 @@
-<%= current_user.email%>
 
- <% @items.reverse.each do |item| %>
- <p><%= item %></p>
-
-<a href="/users/<%= item.user.id %>">
-
-By: <%= item.user.email.upcase %>
- </a>
+    <div id="map-container">
+    <div id="map-canvas"></div>
+  </div>
 
 
- <%end%>
+  <div id="map_2">
 
-<button><a href="/edit">edit</a>
+
+
+  </div>
+
+
+
+  <div id="users_post">
+  <% @homelesspeople.each do |sighting| %>
+    <h5><%= sighting.created_at.localtime.strftime("%a - %D "" %l: %M %p") %></h5>
+    <h4><%= sighting.lat %></h4>
+    <h3><%= sighting.long %></h3>
+
+  <% @items.each do |i| %>
+    <%= i.item_name %>
+   
+    <% end %>
+    
+ 
+    <% end %>
+  </div>
+
+

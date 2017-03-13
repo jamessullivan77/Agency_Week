@@ -1,3 +1,28 @@
 // Place all the styles related to the feed controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//			Feed Page CSS
+
+
+#users_post{
+  margin-top: 100px;
+  display: block;
+  left: 20px;
+}
+#logout{
+    margin-right: 200px;
+}
+#users_post h3{
+  margin-left: 80px;
+  color: green;
+}
+#users_post h4{
+  margin-left: 80px;
+  color: skyblue;
+}
+#users_post h5{
+  margin-left: 80px;
+  color: red;
+}

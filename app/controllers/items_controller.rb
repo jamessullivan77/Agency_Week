@@ -1,6 +1,12 @@
 class ItemsController < ApplicationController
+def index
+end
 def create
-   @items = Item.new 
+   @items = Item.new(params[:items])
+
+   # @items = Item.where(item: params[:item_name]).first
+   # p params, @items
+
     if @items.save 
       redirect_to '/feed'
     end
@@ -8,11 +14,16 @@ def create
 
 private
   def item_params
-    params.require(:user).permit(:item_name)
-    redirect_to '/feed'
+    params.require(:items).permit(:item_name)
+  
     end
 
 end
 
 
 
+
+# <!-- method="/feed" action="POST" -->
+
+
+# try items.find item_name next

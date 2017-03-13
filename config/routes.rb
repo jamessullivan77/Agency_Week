@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   #on Lat, Lng and displaying on the map.
   post '/map' => 'homelesspeople#create'
 
+  get '/api/markers/list' => 'homelesspeople#list'
+
 ###################################################
 #getting
 ###################################################
@@ -36,16 +38,9 @@ Rails.application.routes.draw do
 #editing user porfile
 ######################################### 
    devise_scope :user do
-   get 'edit', to: 'devise/registrations#edit'
-
-   
-   
+     
+   get 'edit', to: 'devise/registrations#edit' 
    get '/profile' => 'profile#index'
- 
- 
-
-
-
 ###################################################
 #displaying the saved users and their info to our 
 #backend admin pages, one called database.
@@ -58,9 +53,6 @@ Rails.application.routes.draw do
 
   post '/database' => 'users#sign_up'
 
+  end
 end
-
-
-
- end
 

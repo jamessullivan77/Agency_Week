@@ -59,7 +59,12 @@ function parallaxScroll(){
 }
  
 
-var map, marker; 
+// #####################################
+// for google maps api
+// #####################################
+if(location.pathname == '/map'){
+  var map, marker; 
+
 
 function initializeMap(location){
 
@@ -102,11 +107,6 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           scaledSize: new google.maps.Size(50, 50)
         }
     
-    // new google.maps.InfoWindow({
-    //     content: document.getElementById('homeless_item')
-    //       });
-    //       return infowindow;
-    //     }
    });
 
     google.maps.event.addListener(marker, 'click',function() {
@@ -118,8 +118,8 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           method: 'POST',
           dataType: "json",
           data: { 
-            x: location.coords.latitude,
-            y: location.coords.longitude
+            x: lat,
+            y: lng
           }
       });
 });
@@ -157,25 +157,126 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           return infowindow;
         }
 
-        // function createInfoWindow(input){
-        //   var infowindow = new google.maps.InfoWindow({
-        //    icon: {
-        //   url: '/assets/homeless.png',
-        //   scaledSize: new google.maps.Size(50, 50)
-          
-        // }
-        // var info = createInfoWindow(document.getElementById("homeless_marker"));
-        //     google.maps.event.addListener('click', function(event) {
-        //       console.log(event)
-        //       info.open(map,marker);
-        //       });
-  // })
+  
 }
 
+}
+
+// ################################################################
+// Feed Page Map
+// ################################################################
+
+if(location.pathname == '/feed'){
+  var map, marker; 
+
+function initializeMap(location){
+
+   console.log(location);
+
+   var currentLocation = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+
+   var mapsOptions = {
+      center: currentLocation,
+      zoom: 14,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  map = new google.maps.Map(document.getElementById('map_2'), mapsOptions);
+
+ //  marker = new google.maps.Marker({
+ //     position: currentLocation,
+ //     map: map
+ // });
+
+  function createInfoWindow(text){
+      var infowindow = new google.maps.InfoWindow({
+        content: text
+    });
+      return infowindow;
+  }
+  
+
+  
+    // populate yor box/field with lat, lng
+    // alert("Lat=" + lat + "; Lng=" + lng);
+   //  var marker = new google.maps.Marker({
+   //     position: event.latLng,
+   //     map: map,
+   //     icon: {
+   //        url: '/assets/homeless.png',
+   //        scaledSize: new google.maps.Size(50, 50)
+   //      }
+    
+   // });
+
+    google.maps.event.addListener(marker, 'click',function() {
+            info.open(map, marker);
+    });
+
+      function createInfoWindow(input){
+          var infowindow = new google.maps.InfoWindow({
+            content: document.getElementById('homeless_item')
+          });
+          return infowindow;
+        }
+
+  
+}
+
+$(window).load(function(){
+  var markerArray = []
+  setTimeout(function(){
+    $.ajax({
+
+          url: '/api/markers/list',
+          type: 'GET',
+          map: map,
+          success: function(markers){
+              for(var i = 0; i < markers.length; i++){
+                //everything
+                var markerLoc = new google.maps.LatLng(markers[i].lat, markers[i].long);
+                console.log(markers[i])
+                   markerArray.push(new google.maps.Marker({
+                       position: markerLoc,
+                       map: map,
+                       icon: {
+                          url: '/assets/homeless.png',
+                          zoom: 19,
+                          scaledSize: new google.maps.Size(50, 50)
+                        }
+                   }))
+              }
+          }
+  })
+  },5000)
+  // var marker = new google.maps.Marker({
+  //      position: event.latLng,
+  //      map: map,
+  //      icon: {
+  //         url: '/assets/homeless.png',
+  //         scaledSize: new google.maps.Size(50, 50)
+  //       }
+  //  });
+
+})
+}
+
+
+
 $(document).ready(function(){
-    navigator.geolocation.getCurrentPosition(initializeMap);
+
+    if(location.pathname == '/feed'){
+      navigator.geolocation.getCurrentPosition(initializeMap);
+    }
+    if(location.pathname == '/map'){
+
+      navigator.geolocation.getCurrentPosition(initializeMap);
+    }
   });
 
+$(".toggle").click(function(){
+  $(".navcollapse").toggleClass("show");
+});
 
 
 
