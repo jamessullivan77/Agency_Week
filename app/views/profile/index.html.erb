@@ -3,7 +3,7 @@
  <b>Email:</b><%= current_user.email%><br>
  <b>First Name: </b><%= current_user.fname%><br>
  <b>Last Name: </b><%= current_user.lname%><br>
- <b>Username: </b><%= current_user.username%><br>
+ <!-- <b>Username: </b><%= current_user.username%><br> -->
  <b>Member Since: </b><%= current_user.created_at.localtime.strftime("%a - %D "" %l: %M %p")%><br>
  <b>Updated at: </b><%= current_user.updated_at.localtime.strftime("%a - %D "" %l: %M %p")%><br>
  <b>Last Signed In: </b><%= current_user.last_sign_in_at.localtime.strftime("%a - %D "" %l: %M %p")%><br>
