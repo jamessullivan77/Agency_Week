@@ -14,10 +14,11 @@
  *= require_self
  */
  body {
+    background:rgba(192,192,192,2);
     margin: 0;
     padding: 0;  
 }
-            /*  NAV  */
+              /*  NAV  */
 
 @import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
 *{
@@ -202,22 +203,19 @@ a:hover{
     width:1170px;
   }
 }
-
 .show{
   height:270px;
 }
-
 #map {
     /*margin-top: 20px;*/
     height: 600px;
     width: 100%; 
   /*653*/
 
-  }
+}
 .custom-control-container {
     margin: 5px;
 }
-
 .custom-control {
     cursor: pointer;
     width: 60px;
@@ -257,26 +255,33 @@ a:hover{
     width: 550px; 
   /*653*/
 
-  }
-
+}
 #users_post{
-  margin-top: 200px;
+  /*border: 1px solid black;*/
+  margin: 200px 0px 0px 400px;
   display: block;
+  width: 400px;
+  text-align: center;
+  padding-right: 50px;
+
 }
 #logout{
     margin-right: 200px;
 }
-/* #dropdown */
 
 #users_post h3{
+  /*border: 1px solid blue;*/
   margin-left: 80px;
-  color: green;
+  color: ;
 }
 #users_post h4{
+  border: 1px solid black;
   margin-left: 80px;
   color: skyblue;
 }
 #users_post h5{
+  border: 3px solid green;
   margin-left: 80px;
   color: red;
 }
+

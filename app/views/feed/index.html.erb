@@ -13,18 +13,18 @@
 
 
   <div id="users_post">
+
   <% @homelesspeople.each do |sighting| %>
     <h5><%= sighting.created_at.localtime.strftime("%a - %D "" %l: %M %p") %></h5>
-    <h4><%= sighting.lat %></h4>
+    <h3><%= sighting.lat %></h3>
     <h3><%= sighting.long %></h3>
-
+        <%= sighting.user.fname %>
+  <% end %>
   <% @items.each do |i| %>
     <%= i.item_name %>
-   
-    <% end %>
-    
- 
-    <% end %>
+  <% end %>
+  
+
   </div>
 
 

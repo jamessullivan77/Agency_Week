@@ -11,10 +11,6 @@ class UsersController < ApplicationController
 		@users = User.all
 		@users = User.new(user_params)
 	end
-	# def show
- #  		@user = User.find_by_permalink(params[:permalink])
-	# end
-	# def edit
 
 	# end
 	private
@@ -25,4 +21,5 @@ class UsersController < ApplicationController
 def user_params
   params.require(:user).permit(:avatar)
 end
+
 end
