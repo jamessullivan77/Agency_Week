@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   
   get '/contact' => 'static#index'
 
-#########################################
+##########################s###############
 #editing user porfile
 ######################################### 
    devise_scope :user do
@@ -52,9 +52,6 @@ Rails.application.routes.draw do
 
   post '/database' => 'users#sign_up'
 
+  end
 end
-
-
-
- end
 

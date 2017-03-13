@@ -208,8 +208,8 @@ a:hover{
 }
 
 #map {
-    /*margin-top: 20px;*/
-    height: 600px;
+    top: 0;
+    height: 653px;
     width: 100%; 
   /*653*/
 

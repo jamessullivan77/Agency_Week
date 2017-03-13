@@ -60,7 +60,7 @@ function parallaxScroll(){
  
 
 // #####################################
-// for google maps api
+// for google maps api map  page
 // #####################################
 if(location.pathname == '/map'){
   var map, marker; 
@@ -94,6 +94,7 @@ function initializeMap(location){
   
 var rightclick = google.maps.event.addListener(map, "rightclick", function(event) {
    console.log("rightclick")
+   // console.log("print:" + JSON.stringify(rightclick))
     var lat = event.latLng.lat();
     var lng = event.latLng.lng();
   
@@ -106,11 +107,16 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           url: '/assets/homeless.png',
           scaledSize: new google.maps.Size(50, 50)
         }
-    
    });
+  $(marker).addClass('marker');
+
+
+    
 
     google.maps.event.addListener(marker, 'click',function() {
             info.open(map, marker);
+            // update the hidden form field with the homeless id
+            $("#homeless_id").val($(marker).attr('data-id'));
     });
 
     $.ajax({
@@ -120,6 +126,10 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           data: { 
             x: lat,
             y: lng
+          },
+          success: function(data) {
+            console.log(data);
+            $(marker).attr('data-id',data.id);
           }
       });
 });
@@ -133,6 +143,7 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
 
 
   $('#add_marker').fadeIn().click(function(event){
+
       console.log("location:",location);
       $.ajax({
           url: '/map',
@@ -140,7 +151,8 @@ var rightclick = google.maps.event.addListener(map, "rightclick", function(event
           dataType: "json",
           data: { 
             x: location.coords.latitude,
-            y: location.coords.longitude
+            y: location.coords.longitude,
+            // item_name: info.
           },
           success: function(data){
             marker.setIcon({
@@ -241,7 +253,6 @@ $(window).load(function(){
                        map: map,
                        icon: {
                           url: '/assets/homeless.png',
-                          zoom: 19,
                           scaledSize: new google.maps.Size(50, 50)
                         }
                    }))

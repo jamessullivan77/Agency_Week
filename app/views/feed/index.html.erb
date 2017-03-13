@@ -17,9 +17,10 @@
     <h5><%= sighting.created_at.localtime.strftime("%a - %D "" %l: %M %p") %></h5>
     <h4><%= sighting.lat %></h4>
     <h3><%= sighting.long %></h3>
-
-  <% @items.each do |i| %>
-    <%= i.item_name %>
+    <h2><%= sighting.user.fname %></h2>
+    <h2><%= sighting.user.email %></h2>
+  <% sighting.items.each do |i| %>
+    <h3><%= i.item_name %></h3>
    
     <% end %>
     

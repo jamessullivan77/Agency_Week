@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-  has_and_belongs_to_many :homlesspeople
+  has_and_belongs_to_many :homelesspeople
   
 end

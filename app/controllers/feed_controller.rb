@@ -1,11 +1,11 @@
 class FeedController < ApplicationController
   before_action :authenticate_user!
 def index
-  @items = Item.all
+  #@items = Item.all
 
-  @users = User.all
+  #@users = User.all
   # @user = User.find params(:current_user_id)
-  @homelesspeople = Homelesspeople.all
+  @homelesspeople = Homelessperson.all.order('created_at DESC')
   # @items_name = Item(params[:items_name])
 
 end

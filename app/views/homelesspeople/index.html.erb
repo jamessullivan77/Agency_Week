@@ -17,10 +17,11 @@
 
 
 <div id="homeless_item">
-<%= form_for Item.new, :html => { :id => 'homeless_item_#{post.id}' } do |i| %> 
-<%= i.label :item_name %>
+<%= form_for Item.new do |i| %> 
+<%= i.label :item_name, "Item Name" %>
 <%= i.text_field :item_name %>
-<%= i.submit ("Submit")  %>
+<%= hidden_field_tag :homeless_id %>
+<%= i.submit ("Submit") %>
 <% end %>
 
 
