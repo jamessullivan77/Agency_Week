@@ -7,15 +7,4 @@ class User < ApplicationRecord
 
   has_many :homelesspeople
 
-#   def to_param
-#   permalink
-#   end
-
-# private
-
-#   def create_permalink
-#     self.permalink = current_user.email
-#   end
-# end
-
 end
