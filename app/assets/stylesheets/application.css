@@ -258,31 +258,43 @@ a:hover{
 
 }
 #users_post{
-  /*border: 1px solid black;*/
+  border: 5px solid black;
   margin: 200px 0px 0px 400px;
   display: block;
   width: 400px;
   text-align: center;
-  padding-right: 50px;
+  padding-right: 70px;
 
 }
 #logout{
-    margin-right: 200px;
+  margin-right: 200px;
 }
+#users_post h2{
+  text-align: center;
+  margin-left: 90px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 
+}
 #users_post h3{
-  /*border: 1px solid blue;*/
   margin-left: 80px;
-  color: ;
+  color: green;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
 }
 #users_post h4{
-  border: 1px solid black;
-  margin-left: 80px;
-  color: skyblue;
-}
-#users_post h5{
   border: 3px solid green;
   margin-left: 80px;
-  color: red;
+  color: blue;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#item{
+  margin-left: 80px;
+  color: coral;
+  font-size: 25px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
