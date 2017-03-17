@@ -6,10 +6,10 @@
 <div id="map">
 </div>
 <div id="homeless_item">
-<%= form_for Item.new do |i| %> 
-<%= i.label :item_name, "Item Name" %>
-<%= i.text_field :item_name %>
-<%= hidden_field_tag :homeless_id %>
-<%= i.submit ("Submit") %>
-<% end %>
+	<%= form_for Item.new do |i| %> 
+	<%= i.label :item_name, "Item Name" %>
+	<%= i.text_field :item_name %>
+	<%= hidden_field_tag :homeless_id %>
+	<%= i.submit ("Submit") %>
+	<% end %>
 </div>
