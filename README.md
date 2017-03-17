@@ -1,24 +1,12 @@
 # README
+### Helping Hands
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web application for helping the homeless people in NYC
+- With Google maps API 
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Programs used: 
+Ruby on rails, Devise Gem, Google Maps API, HTML, CSS, Javascript
