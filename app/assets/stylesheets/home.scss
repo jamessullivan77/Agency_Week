@@ -13,7 +13,9 @@ div#parallax-bg-1{
 	margin-left: -600px; 
 	z-index: 1;
 }
- // background middle layer
+
+ 	// background middle layer
+
 div#parallax-bg-2{
 	position: fixed;
 	width: 1200px;
@@ -105,7 +107,7 @@ div#bg-4-4{
 	right:210px;
 }
 
-// middle layer clouds
+		// middle layer clouds
 
 div#parallax-bg-2 div{
 	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg1.png');
@@ -146,7 +148,7 @@ div#bg-2-6{
 	left:340px;
 }
 
-// background layer clouds 
+	// background layer clouds 
 
 div#parallax-bg-1 div{
 	background-repeat:no-repeat;
@@ -184,20 +186,16 @@ div#bg-1-5{
 	left:-200px;
 }
 
-//  FONTS
-
+			//  FONTS
 
 @font-face {
 	font-family:'Germano';
 	src:'/assets/Germano-Regular.ttf';
 }
-
 @font-face {
 	font-family:'Medula';
 	src:'/assets/MedulaOne-Regular.ttf'
 }
-
-
 @font-face {
 	font-family:'amaranth';
 	src:'/assets/amaranth/Amaranth-Regular.ttf'

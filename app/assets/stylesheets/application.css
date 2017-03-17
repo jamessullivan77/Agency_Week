@@ -145,60 +145,64 @@ a:hover{
   background:-webkit-linear-gradient(#5a8eee, #4066e8);
   background:-moz-linear-gradient(#5a8eee, #4066e8);
   font-family:arial;
- 
 }
-  .container{
-    width:750px;
-  }
-  .navbar-header{
-    float:left;
-  }
-  .navbar-header{
-    background: rgba(255,255,255, 0.1);
-  }
-  .toggle{
-    display: none;
-  }
-  .navcollapse{
-    display: block;
-    height:0 !important;
-    padding-top:10px !important;
-    background:transparent !important;
-    width: auto;
-    margin:0;
-    padding:0;
-    overflow:visible ;
-  }
-  .nav{
-    margin:0;
-    padding:0;
-  }
-  .nav > li{
-    float:right;
-    list-style:none;
-    padding: 5px;
-    
-  }
-  .nav > li > a{
-    border-radius: 5px !important;
-    background: transparent;
-    padding:0 15px;
-    border: none;
-  }
-  .nav > li > a:hover{
-  background:-webkit-linear-gradient(#d9e2f9, #becdf6);
-  background:-moz-linear-gradient(#d9e2f9, #becdf6);
-  background:linear-gradient(#d9e2f9, #becdf6);
-  color: #4066e8;
- }
+.container{
+  width:750px;
+}
+.navbar-header{
+  float:left;
+}
+.navbar-header{
+  background: rgba(255,255,255, 0.1);
+}
+.toggle{
+  display: none;
+}
+.navcollapse{
+  display: block;
+  height:0 !important;
+  padding-top:10px !important;
+  background:transparent !important;
+  width: auto;
+  margin:0;
+  padding:0;
+  overflow:visible ;
+}
+.nav{
+  margin:0;
+  padding:0;
+}
+.nav > li{
+  float:right;
+  list-style:none;
+  padding: 5px;
   
 }
+.nav > li > a{
+  border-radius: 5px !important;
+  background: transparent;
+  padding:0 15px;
+  border: none;
+}
+.nav > li > a:hover{
+background:-webkit-linear-gradient(#d9e2f9, #becdf6);
+background:-moz-linear-gradient(#d9e2f9, #becdf6);
+background:linear-gradient(#d9e2f9, #becdf6);
+color: #4066e8;
+}             
+          /* NAV  END*/
+
+
+
+
+         /*Media Query*/
+
+
 @media(min-width:990px){
   .container{
     width:950px;
   }
 }
-
 @media(min-width:1200px){
   .container{
     width:1170px;
@@ -207,12 +211,14 @@ a:hover{
 .show{
   height:270px;
 }
+
+          /*Map API / Page*/
+
 #map {
     top: 0;
     height: 653px;
     width: 100%; 
   /*653*/
-
 }
 .custom-control-container {
     margin: 5px;
@@ -255,8 +261,11 @@ a:hover{
     height: 350px;
     width: 550px; 
   /*653*/
-
 }
+
+          /*Feed Pg Post*/
+
+
 #users_post{
   border: 5px solid black;
   margin: 200px 0px 0px 400px;
